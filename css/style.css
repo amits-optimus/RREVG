@@ -18,6 +18,13 @@ width: 100%;
 background: #3EA99F;
 text-align:center;
 }
+.titleBar{
+position:fixed;top:0px;
+height: 7%;
+width: 100%;
+background: #3EA99F;
+text-align:center;
+}
 #footerBar{
 height: 7%;
 width: 100%;
@@ -28,7 +35,6 @@ padding-right:2%;
 }
 #logo{
 height:90%;
-align:center;
 }
 #linkBrowse{
 color: #ffff;
@@ -53,6 +59,27 @@ color: #ffff;
 	text-align:center;
 	text-shadow:1px 1px 0px #000000;
 }
+.backButton {
+	margin-left:1%;
+	margin-top:0.4%;
+	border:1px solid #dcdcdc;
+	background: #6EA99F;
+	height:70%;
+	width:18%;
+	display:none;
+}
+.backButton p{
+	color:#fffcfc;
+	font-family:arial;
+	font-size:75%;
+	font-weight:bold;
+	font-style:normal;
+	margin-top:2%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+}
+
 #searchContainer{
 margin-top:20%;
 text-align:center;

@@ -110,6 +110,8 @@
 				categoryArray.sort();
 				addCategoryToList();
 			}
+			document.getElementById('logo').style.display = 'none';
+			document.getElementById('backButton').style.display = 'block';
 			document.getElementById('searchContainer').style.display = 'none';
 			document.getElementById('footerBar').style.display = 'none';
 			document.getElementById('Tabs').style.display = 'block';
@@ -141,6 +143,8 @@
 								categoryArray.sort();
 								addCategoryToList();
 							}
+							document.getElementById('logo').style.display = 'none';
+							document.getElementById('backButton').style.display = 'block';
 							document.getElementById('searchContainer').style.display = 'none';
 							document.getElementById('footerBar').style.display = 'none';
 							document.getElementById('Tabs').style.display = 'block';
@@ -163,6 +167,8 @@
 								categoryArray.sort();
 								addCategoryToList();
 							}
+							document.getElementById('logo').style.display = 'none';
+							document.getElementById('backButton').style.display = 'block';
 							document.getElementById('searchContainer').style.display = 'none';
 							document.getElementById('footerBar').style.display = 'none';
 							document.getElementById('Tabs').style.display = 'block';
@@ -497,11 +503,23 @@
 			}
 		}
 	}
+	function backToHome(){
+		document.getElementById('logo').style.display = 'block';
+		document.getElementById('backButton').style.display = 'none';
+		document.getElementById('titleBar').className = '.titleBar';
+		document.getElementById('searchContainer').style.display = 'block';
+		document.getElementById('footerBar').style.display = 'block';
+		document.getElementById('Tabs').style.display = 'none';
+
+	}
 </script>
 </head>
 <body>
 	<div id="titleBar">
-		<img id="logo" src="images/logo.bmp"></img>
+		<button id="backButton" class="backButton" onClick="backToHome()">
+			<p>SearchPage</p>
+		</button>
+		<img id="logo" src="images/logo.bmp"></img>		
 	</div>
 	<div id="footerBar">
 		<button class="browseButton" onClick="browseAll()">
