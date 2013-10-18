@@ -1,6 +1,7 @@
 html {
-	height: 100%;
+	
 	width:100%;
+	overflow: hidden;
 }
 
 body {
@@ -9,8 +10,9 @@ body {
 	height: 100%;
 	width:100%;
 	margin:0px;
+	overflow-x:hiden;
+	overflow-y:hiden;
 }
-
 #titleBar{
 position:fixed;top:0px;
 height: 7%;
@@ -23,7 +25,6 @@ position:fixed;top:0px;
 height: 7%;
 width: 100%;
 background: #3EA99F;
-text-align:center;
 }
 #footerBar{
 height: 7%;
@@ -35,6 +36,7 @@ padding-right:2%;
 }
 #logo{
 height:90%;
+float:left;
 }
 #linkBrowse{
 color: #ffff;
@@ -44,34 +46,14 @@ color: #ffff;
 	margin-top:0.4%;
 	border:1px solid #dcdcdc;
 	background: #6EA99F;
-	height:70%;
-	width:18%;
+	width:100px;
+	height:27px;
 	display:inline-block;
 }
 .browseButton p{
 	color:#fffcfc;
 	font-family:arial;
-	font-size:75%;
-	font-weight:bold;
-	font-style:normal;
-	margin-top:2%;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #000000;
-}
-.backButton {
-	margin-left:1%;
-	margin-top:0.4%;
-	border:1px solid #dcdcdc;
-	background: #6EA99F;
-	height:70%;
-	width:18%;
-	display:none;
-}
-.backButton p{
-	color:#fffcfc;
-	font-family:arial;
-	font-size:75%;
+	font-size:15px;
 	font-weight:bold;
 	font-style:normal;
 	margin-top:2%;
@@ -87,21 +69,21 @@ width:100%;
 }
 #searchInput{
 width:50%;
+height:22px;
 }
-.searchButton{
-	margin-right:1%;
+.searchButton {
+	margin-left:1%;
 	margin-top:0.4%;
 	border:1px solid #dcdcdc;
 	background: #6EA99F;
-	height:20%;
-	min-width:70px;
-	width:10%;
-	display:inline-block;
+	width:100px;
+	height:27px;
+	display:none;
 }
 .searchButton p{
 	color:#fffcfc;
 	font-family:arial;
-	font-size:75%;
+	font-size:15px;
 	font-weight:bold;
 	font-style:normal;
 	margin-top:2%;
@@ -110,18 +92,57 @@ width:50%;
 	text-shadow:1px 1px 0px #000000;
 }
 
+.searchTermButton {
+	margin-left:1%;
+	margin-top:0.4%;
+	border:1px solid #0000;
+	background: #6EA99F;
+	width:100px;
+	height:27px;
+}
+.searchTermButton p{
+	color:#fffcfc;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	margin-top:3%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+}
+.aboutButton {
+	float:right;
+	margin-top:0.4%;
+	border:1px solid #dcdcdc;
+	background: #6EA99F;
+	width:100px;
+	height:27px;
+}
+.aboutButton p{
+	color:#fffcfc;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	margin-top:2%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+}
 a:-webkit-any-link {
 
 text-decoration: none;
 cursor: auto;
 }
 
-.nav-indicator {background-color:#3EA99F;margin:0;}
-.listItemIndexList { display:block; text-decoration:none; color:#000000; background-color:#FFFFFF; 
-border-bottom-style:solid; border-bottom-width: 1%; border-bottom-color:#CCCCCC; cursor:pointer; margin:0; }
-.listItemIndexList1 { display:block; text-decoration:none; color:#000000; background-color:#eeeeee; 
-border-bottom-style:solid; border-bottom-width: 1%; border-bottom-color:#CCCCCC; cursor:pointer; margin:0; }
-#iphone-search { list-style: none; padding:0 1%; margin:0; font-family:Georgia, Times, serif; font-size:12px; line-height:120%; left:95%; 
+.nav-indicator {background-color:#3EA99F;margin:0;
+	min-height: 30px;padding:5px;color:#ffffff;}
+.listItemIndexList { display:block; text-decoration:none; color:#000000; background-color:#FFFFFF;padding:5px;
+border-bottom-style:solid; border-bottom-width: 1%; border-bottom-color:#CCCCCC; cursor:pointer; margin:0; min-height: 30px;padding:5px}
+.listItemIndexList1 { display:block; text-decoration:none; color:#000000; background-color:#eeeeee; padding:5px;
+border-bottom-style:solid; border-bottom-width: 1%; border-bottom-color:#CCCCCC; cursor:pointer; margin:0; min-height: 30px;}
+#iphone-search { list-style: none; padding:0 1%; margin:0; font-family:Georgia, Times, serif; font-size:12px; line-height:120%; margin-left:85%; 
 position:fixed; text-align:center; font-weight:bold; }
 #iphone-search li a { text-decoration:none; color:#666666; }
 #iphone-scroll {  padding:0; margin:0; font-family:Georgia, Times, serif; }
@@ -129,20 +150,23 @@ position:fixed; text-align:center; font-weight:bold; }
 
 #Tabs {
 display: none;
-margin-top:12%;
+margin-top:6%;
 margin-left:0px;
 width:100%;
+overflow-x: hidden;
 }
 #tabsList {
 margin-left:10%;
 width:100%;
 list-style-type: none;
+
 }
 
 #li_tab1 {
 display: inline-block;
 height: 40%;
 width:35%;
+
 }
 
 #li_tab2 {
@@ -152,13 +176,12 @@ width:35%;
 }
 
 #tab1Link{
-position: relative;
 display: block;
 line-height: 24px;
-background: #f6f6f6;
+background: #eeeeee;
 z-index: 9999;
 border: 1px solid #ccc;
-
+position:fixed;
 /* The following four lines are to make the top left and top right corners of each tab rounded. */
 -moz-border-radius-topleft: 4px;
 border-top-left-radius: 4px;
@@ -166,20 +189,20 @@ border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 /* end of rounded borders */
 
-width: 95%;
+width: 35%;
 color: #000000;
 text-decoration: none;
 font-weight: bold;
 }
 
 #tab2Link{
-position: relative;
+position:fixed;
 display: block;
 line-height: 24px;
-background: #f6f6f6;
+background: #fefefe;
 z-index: 9999;
 border: 1px solid #ccc;
-
+position:fixed;
 /* The following four lines are to make the top left and top right corners of each tab rounded. */
 -moz-border-radius-topleft: 4px;
 border-top-left-radius: 4px;
@@ -187,7 +210,7 @@ border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 /* end of rounded borders */
 
-width: 95%;
+width: 35%;
 color: #000000;
 text-decoration: none;
 font-weight: bold;
@@ -195,13 +218,16 @@ font-weight: bold;
 #Tabs ul li a:hover {
 text-decoration: underline; // a very simple effect when hovering the mouse on tab
 }
+.ui-dialog { z-index: 99999 !important ;}
 
 #Content_Area {
 	clear: both;
 	line-height: 19px;
-	position: relative;
-	z-index: 5;
-	margin:0px;
+	overflow-y:scroll;
+	z-index: 9;
+	margin-left:5px;
+	margin-top: 30px;
+	max-height: 500px;
 } 
 
 #nlists{
@@ -214,6 +240,18 @@ text-decoration: underline; // a very simple effect when hovering the mouse on t
 	margin:0;
 	padding:0;
 	height: 25px;
+}
+#dialogList{
+margin:0;
+padding:0;
+}
+.head  {
+	display: block;
+	background-color:#3EA99F;
+	margin:0;
+	padding:5px;
+	min-height: 30px;
+	color: #ffffff;
 }
 
 
